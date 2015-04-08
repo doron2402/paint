@@ -1,0 +1,10 @@
+<% include header.html %>
+
+<h1>Businesses</h1>
+<ul id="users">
+  <% businesses.forEach(function(business){ %>
+    <li><%= business.name %> &lt;<%= business.business_id %>&gt;</li>
+  <% }) %>
+</ul>
+
+<% include footer.html %>
