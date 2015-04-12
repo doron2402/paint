@@ -24,7 +24,9 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 app.use(routes.static);
 app.use(routes.pages);
 app.use(routes.users);
+app.use(routes.artists);
 app.use(routes.auth);
+app.use(routes.search);
 app.use(routes.errors.unknown);
 
 app.listen(settings.config.server.port, err => {

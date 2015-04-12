@@ -4,5 +4,6 @@ module.exports = {
   auth: require('./auth'),
   pages: require('./pages'),
   static: require('./static'),
-  artists: require('./artists')
+  artists: require('./artists'),
+  search: require('./search')
 };

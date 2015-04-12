@@ -1,4 +1,9 @@
-var artistsRoute = {};
+let bodyParser = require('body-parser');
+let csrf = require('csurf');
+let csrfProtection = csrf({ cookie: true });
+let parseForm = bodyParser.urlencoded({ extended: false });
+let express = require('express');
+let artistsRoute = express.Router();
 
 artistsRoute.get('/artists/signup/basic', csrfProtection, (req, res) => {
   res.render('artists/signup-basic', {

@@ -17,13 +17,6 @@ usersRoute.get('/users', function(req, res) {
   });
 });
 
-usersRoute.get('/users/signup', (req, res) => {
-  res.render('users/signup', {
-    title: "EJS example",
-    header: "Some users"
-  });
-});
-
 usersRoute.get('/users/forgot', (req, res) => {
   res.render('users/forgot', {
     title: "EJS example",
@@ -41,11 +34,5 @@ usersRoute.get('/profile', (req, res) => {
 });
 
 usersRoute.get('/users/vip', usersController.usersVip);
-
-usersRoute.post('/users/signup', mw.users.validateCreateAttributes, usersController.postCreateUser);
-
-usersRoute.post('/users/create', mw.users.validateCreateAttributes, usersController.postCreateUser);
-
-// usersRoute.post('/signup', mw.users.validateSignupField, usersController.postSignup);
 
 module.exports = usersRoute;
